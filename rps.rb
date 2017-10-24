@@ -13,7 +13,7 @@ end
 # returns either "rock", "paper", or "scissors" using gets.chomp
 def user_choose_rps
 	puts "What would you like to put in? Rock? Paper? Scissors?" 
-	user = gets.chomp 
+	user = gets.chomp
 end
 
 # returns either "It was a tie!", "You win!", or "The computer wins!"
