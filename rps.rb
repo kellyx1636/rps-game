@@ -30,7 +30,9 @@ end
 
 # puts "The computer chose ____" followed by "You chose ____" followed by the result of #get_winner
 def play_game
-	
+# 	user_choose_rps 
+# 	comp_choose_rps 
+# 	get_winner 
 end
 
 play_game
