@@ -2,11 +2,11 @@
 def comp_choose_rps
 	rand_num = rand(3) 
 	if rand_num == 1 
-	   puts "rock"
+	   comp = "rock"
 	elsif rand_num == 2 
-	   puts "paper"
+	   comp = "paper"
 	else 
-	   puts "scissors"
+	   comp = "scissors"
 	end
 end
 
@@ -22,8 +22,8 @@ def get_winner(comp,user)
        return "The computer wins!"
    elsif (comp =="rock" && user == "rock") || (comp =="scissors" && user == "scissors") || (comp =="paper" && user == "paper") 
        return "It was a tie!"
-   elsif (comp =="rock" && user == " ") || (comp =="paper" && user == " ") || (comp =="scissors" && user == " ") 
-       return "What happen? Choose one already!"
+#   elsif (comp =="rock" && user == " ") || (comp =="paper" && user == " ") || (comp =="scissors" && user == " ") 
+#       return "What happen? Choose one already!"
    # else #if the user does not give an answer 
    #    puts "Why didn't you enter your choice?"    
    else 
@@ -33,9 +33,9 @@ end
 
 # puts "The computer chose ____" followed by "You chose ____" followed by the result of #get_winner
 def play_game
-# 	user_choose_rps 
-# 	comp_choose_rps 
-# 	get_winner 
+	user_choose_rps 
+	comp_choose_rps 
+	get_winner 
 end
 
-play_game
+#play_game
