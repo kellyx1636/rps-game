@@ -1,7 +1,13 @@
 # returns either "rock", "paper", or "scissors" using rand()
 def comp_choose_rps
 	rand_num = rand(3) 
-	
+	if rand_num == 1 
+	   puts "rock"
+	elsif rand_num == 2 
+	   puts "paper"
+	else 
+	   puts "scissors"
+	end
 end
 
 # returns either "rock", "paper", or "scissors" using gets.chomp
