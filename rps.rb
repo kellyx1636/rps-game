@@ -23,6 +23,8 @@ def get_winner(comp,user)
        return "It was a tie!"
    elsif (comp =="rock" && user == " ") || (comp =="paper" && user == " ") || (comp =="scissors" && user == " ") 
        return "What happen? Choose one already!"
+   # else #if the user does not give an answer 
+   #    puts "Why didn't you enter your choice?"    
    else 
        return "You win!"
    end
