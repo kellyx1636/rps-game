@@ -8,34 +8,36 @@ end
 def comp_choose_rps
 	rand_num = rand(3) 
 	if rand_num == 1 
-	   comp = "rock"
+	   "rock"
 	elsif rand_num == 2 
-	   comp = "paper"
+	   "paper"
 	else 
-	   comp = "scissors"
+	   "scissors"
 	end
 end
 
 # returns either "It was a tie!", "You win!", or "The computer wins!"
 def get_winner(comp,user)
-   if (comp =="rock" && user == "scissors") || (comp =="paper" && user == "rock") || (comp =="scissors" && user == "rock")
-       return "The computer wins!"
-   elsif (comp =="rock" && user == "rock") || (comp =="scissors" && user == "scissors") || (comp =="paper" && user == "paper") 
-       return "It was a tie!"
-   #  elsif (comp =="rock" && user == " ") || (comp =="paper" && user == " ") || (comp =="scissors" && user == " ") 
-   #      return "What happen? Choose one already!"
-   # else #if the user does not give an answer 
-   #    puts "Why didn't you enter your choice?"    
+   if (comp == user) 
+       puts "It was a tie!"
+   elsif (comp =="rock" && user == "scissors") || (comp =="paper" && user == "rock") || (comp =="scissors" && user == "paper")
+       puts "The computer wins!"
+   elsif ( comp == "scissors" && user =="rock") || (comp == "rock" && user =="paper") || (comp == "paper" && user =="scissors")
+       puts "You win!"
    else 
-       return "You win!"
+   	puts "Blah"
    end 
 end
 
+#get_winner("paper","scissors")
+
 # puts "The computer chose ____" followed by "You chose ____" followed by the result of #get_winner
 def play_game
-	user_choose_rps 
-	comp_choose_rps 
-	get_winner 
+	#user_choose_rps 
+	comp_choice = comp_choose_rps #<-- no need to use this because it's used once 
+	user_choice = user_choose_rps  
+	puts "The computer chose #{comp_choice}. You chose #{user_choice}." 
+	puts get_winner(comp_choice, user_choice)
 end
 
 play_game
