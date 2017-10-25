@@ -25,11 +25,10 @@ def get_winner(comp,user)
    elsif ( comp == "scissors" && user =="rock") || (comp == "rock" && user =="paper") || (comp == "paper" && user =="scissors")
        puts "You win!"
    else 
-   	puts "Blah"
+   	puts "You did not pick either of the choices! Let's try this again." 
+   	play_game
    end 
-end
-
-#get_winner("paper","scissors")
+end 
 
 # puts "The computer chose ____" followed by "You chose ____" followed by the result of #get_winner
 def play_game
